@@ -1,0 +1,6 @@
+# Set the default line endings, in case people don't have core.autocrlf set.
+* text=auto
+
+# Declare .txt EOL to be auto configured.
+# This enables opening .txt files in Excel on Windows platforms.
+*.txt text
