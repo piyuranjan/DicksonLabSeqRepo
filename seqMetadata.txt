@@ -1,0 +1,1 @@
+#RunID	#SampleType	#ExtractSrc	#AssayType	#LibSource	#LibSelection	#LibKit	#LibLayout	#SeqLoc	#SeqDate	#SeqPlatform	#SeqInstrument	#Barcode	#PoreVer	#BasecallVer	#OrgGenus	#OrgSpc	#OrgStr	#OrgIsolate	#OrgSpcTaxID	#OrgTaxID	#Host	#HostDisease	#RunSize	#FastqSize	#ReadNum	#ReadLenMin	#ReadLenMax	#ReadLenAvg	#ReadBases	#Contact
