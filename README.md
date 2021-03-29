@@ -13,18 +13,18 @@ This file in this repository stores sequencing run metadata in a tab separated f
 |#|Column name|Data type|Possible values|Description|
 |---|---|---|---|---|
 |1|#RunID|str||ID for the sequencing run as provided by the sequencing instrument. Always required.|
-|2|#SampleType|str|lung-microbiome, gut-microbiome, metagenome, isolate, mixed|Type of sample used for sequencing. Mixed type is only possible for a barcoded run where the metadata will have this information.|
-|3|#ExtractSrc|str|feces, BAL, gut-swab, OP-swab, nasal-swab|Sample type from which extraction was performed. OP = oropharyngeal|
-|4|#AssayType|str|WGS|Type of sequencing reaction that was performed. Currently only whole genome shotgun is used.|
-|5|#LibSource|str|genomic|Source material for the library - DNA or RNA.|
-|6|#LibSelection|str|random, PCR|Library selection method. Fragments radomly selected or amplified.|
-|7|#LibKit|str|RAD004, RBK004|Library prep kit used.|
-|8|#LibLayout|str|single, paired, 1d2|Library layout.|
-|9|#SeqLoc|str|DL, AGC|Sequencing location. DL = Dickson lab, AGC = UM Advanced Genomics Core.|
-|10|#SeqDate|date|yyyy-mm-dd|Sequencing date. Though discouraged, yyyy-mm can be used if a specific date is not known.|
-|11|#SeqPlatform|str|Nanopore, Illumina|Sequencing platform or maker of the sequencing instrument.|
-|12|#SeqInstrument|str|MinION, MiSeq, HiSeq1000|Exact model of the sequencing instrument.|
-|13|#Barcode|int|0, 1:n|If the run was barcoded, parent run would recieve value 0 and all children would receive their barcode number. Leave blank if the run wasn't barcoded.|
+|2|#Barcode|int|0, 1:n|If the run was barcoded, parent run would recieve value 0 and all children would receive their barcode number. Leave blank if the run wasn't barcoded.|
+|3|#SampleType|str|lung-microbiome, gut-microbiome, metagenome, isolate, mixed|Type of sample used for sequencing. Mixed type is only possible for a barcoded run where the metadata will have this information.|
+|4|#ExtractSrc|str|feces, BAL, gut-swab, OP-swab, nasal-swab|Sample type from which extraction was performed. OP = oropharyngeal|
+|5|#AssayType|str|WGS|Type of sequencing reaction that was performed. Currently only whole genome shotgun is used.|
+|6|#LibSource|str|genomic|Source material for the library - DNA or RNA.|
+|7|#LibSelection|str|random, PCR|Library selection method. Fragments radomly selected or amplified.|
+|8|#LibKit|str|RAD004, RBK004|Library prep kit used.|
+|9|#LibLayout|str|single, paired, 1d2|Library layout.|
+|10|#SeqLoc|str|DL, AGC|Sequencing location. DL = Dickson lab, AGC = UM Advanced Genomics Core.|
+|11|#SeqDate|date|yyyy-mm-dd|Sequencing date. Though discouraged, yyyy-mm can be used if a specific date is not known.|
+|12|#SeqPlatform|str|Nanopore, Illumina|Sequencing platform or maker of the sequencing instrument.|
+|13|#SeqInstrument|str|MinION, MiSeq, HiSeq1000|Exact model of the sequencing instrument.|
 |14|#PoreVer|str|9.4.1|Specific to Nanopore sequencing, pore version of the sequencing chemistry.|
 |15|#BasecallVer|str|guppygpu-vX.X.X|Specific to Nanopore sequencing, program and version of the basecaller software.|
 |16|#OrgGenus|str||If an isolate, genus name of the organism.|
@@ -42,6 +42,9 @@ This file in this repository stores sequencing run metadata in a tab separated f
 |28|#ReadLenMax|int||Maximum read length in the sequencing set. Only passed reads for Nanopore sequencing.|
 |29|#ReadLenAvg|int||Average read length in the sequencing set. Only passed reads for Nanopore sequencing.|
 |30|#ReadBases|int||Number of bases in the sequencing set. Only passed reads for Nanopore sequencing.|
-|31|#Contact|str|uniqNames|A comma separated list of uniqnames who can be contacted for this run for more details.|
+|31|#DateCreate|date|yyyy-mm-dd|Date this run was first submitted to the repository.|
+|32|#DateMod|date|yyyy-mm-dd|Date of latest modification, if a modification was done.|
+|33|#Contact|str|uniqNames|A comma separated list of uniqnames who can be contacted for this run for more details.|
+
 
 All column names are prefixed with a hash/pound (`#`) sign, so that, it's easier to manage column names even with basic Linux commands and utilities.

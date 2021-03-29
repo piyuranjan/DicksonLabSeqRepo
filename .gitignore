@@ -1,3 +1,9 @@
+# Ignore all files/folders inside these folders.
 /Download/*
 /Stage/*
 /Upload/*
+
+# Allow readme files for version control for under these folders.
+!/Download/README.md
+!/Stage/README.md
+!/Upload/README.md
